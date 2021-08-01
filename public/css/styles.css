@@ -1,0 +1,165 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #333;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #218EEE;
+}
+
+/* Nav items*/
+.text-header {
+    font-family: 'Zen Tokyo Zoo';
+    font-size: 30px;
+}
+
+.responsive-item {
+    cursor: pointer;
+}
+
+.body-content {
+    width: 100vw;
+    height: 100vh;
+}
+
+.side-bar-content {
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    display: none;
+    z-index: 999999;
+}
+
+@keyframes openMenu {
+    from {
+        opacity: 0;
+        transform: translate3d(10px, 0px, 0px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0px, 0px, 0px)
+    }
+}
+
+.content-side {
+    height: 100%;
+    position: relative;
+    animation: openMenu 4ms;
+}
+
+.item-side {
+    animation: openMenu 2s;
+}
+
+.btn-closed {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+
+.search-item {
+    display: none;
+}
+
+/* Carousel */
+
+.carousel-container {
+    height: 550px;
+    width: 100%;
+}
+
+.carousel-container img {
+    height: 550px;
+}
+
+/* Content pagination table css*/
+
+table {
+    color: #333;
+    font-size: .9em;
+    font-weight: 300;
+    line-height: 40px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 2px solid #0d6efd;
+    width: 500px;
+    margin: 50px auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .16);
+    border-radius: 2px;
+}
+
+th {
+    background: #0d6efd;
+    color: #fff;
+    border: none;
+}
+
+tr:hover:not(th) {
+    background-color: rgb(207, 207, 207);
+}
+
+
+input[type="button"] {
+    transition: all .3s;
+    border: 1px solid #ddd;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+input[type="button"]:not(.active) {
+    background-color: transparent;
+}
+
+.active {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+input[type="button"]:hover:not(.active) {
+    background-color: #ddd;
+}
+
+.card-body {
+    color: #000;
+}
+
+.price {
+    font-size: 25px;
+    text-align: center;
+    background-color: #0d6efd;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, .16);
+    color: #fff;
+}
+
+/* Filter style css */
+
+.filter-content {
+    width: 30rem;
+    height: 60px;
+    margin: 5px;
+    display: block;
+}
+
+.filter-content>button {
+    width: 100%;
+    height: 60px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+}

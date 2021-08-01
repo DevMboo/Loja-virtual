@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Styles pag css -->
+    <link rel="stylesheet" href="./public/css/responsive.css">
+    <link rel="stylesheet" href="./public/css/styles.css">
+    <link rel="stylesheet" href="./public/css/animated.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- /Styles pag css -->
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
+    <!-- /Fonts-->
+
+    <title>Loja-Virtual</title>
+</head>
+
+<body>
+    <!-- Preloader animation -->
+    <div id="preloader">
+        <div class="inner">
+           <div class="bolas">
+              <div></div>
+              <div></div>
+              <div></div>                    
+           </div>
+        </div>
+    </div>
+    <!-- /Preloader animation -->
+    <!-- Header pag -->
+
+    <header class="col-md-12 p-3 bg-primary text-white" style="z-index: 301;">
+        <div class="container" style="position: relative;">
+            <div
+                class="d-flex text-center flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <div class=" d-flex col-3 align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <h4 class="text-white text-header">lojavirtual.com</h4>
+                </div>
+
+                <div class="menu-text col-lg-auto d-flex justify-content-end"
+                    style="position: absolute;left: 10px;top:5px">
+                    <a class="nav-link px-2 text-white responsive-item" onclick="openMenu()"><i
+                            class="fas fa-ellipsis-v"></i></a>
+                    <a href="#" class="nav-link px-2 text-white responsive-item" onclick="buscar()"><i
+                            class="fas fa-search"></i></a>
+                </div>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="index.html" class="nav-link px-2 text-white item-menu">Home</a></li>
+                    <li><a href="produtos.html" class="nav-link px-2 text-white item-menu">Produtos</a></li>
+                    <li><a href="categorias.html" class="nav-link px-2 text-white item-menu">Categorias</a></li>
+                </ul>
+
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                    <input type="search" class="form-control form-control-dark item-search"
+                        placeholder="Faça sua busca..." aria-label="Search">
+                </form>
+
+                <div class="text-end content-register">
+                    <button type="button" class="btn btn-outline-light item-register me-2">Entrar na sua conta</button>
+                    <button type="button"
+                        class="btn btn-warning me-2 text-white item-register btn-effects">Cadastrar-se</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search responsive bar -->
+
+        <div class="container-fluid search-item" id="searchContent">
+            <div class="row d-flex justify-content-center pt-3 text-center" style="position: relative;">
+                <button onclick="closedMenu()" class="btn text-white"
+                    style="position: absolute;width: 40px;top: -22px; left: 2px;">X</button>
+                <div class="col-md-12 d-flex justify-content-center text-center">
+                    <form action="" method="post" class="col-lg-10 d-flex justify-content-center">
+                        <input type="search" placeholder="Faça sua busca..." class="col-md-8"
+                            style="width: 100%;height: 45px;padding: 5px;border:none;border-radius: 5px;">
+                        <button type="submit" class="btn btn-lg btn-warning text-white"
+                            style="width: 90px;border: none;margin-left: 5px;"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- /Search responsive bar -->
+
+
+    </header>
+
+    <main class="body-conten col-12">
+
+
+        <!-- side bar menu -->
+
+        <section class="side-bar-content" id="sideMenu">
+
+
+            <div class="content-side d-flex flex-column flex-shrink-0 p-3 text-white bg-primary" style="width: 280px;"
+                id="side-bar">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <span class="fs-4">Menu</span>
+                    <a class="btn-closed btn btn-warning text-white" id="btn-closed" onclick="closedMenu()">X</a>
+                </a>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a href="#" class="item-side nav-link bg-warning active" aria-current="page">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./produtos.html" class="item-side nav-link text-white">
+                            Produtos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./categorias.html" class="item-side nav-link text-white">
+                            Categorias
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="item-side nav-link text-white">
+                            Carrinho
+                        </a>
+                    </li>
+                </ul>
+                <hr>
+                <div class="dropdown">
+                    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                        id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://github.com/devMboo.png" alt="" width="32" height="32"
+                            class="rounded-circle me-2">
+                        <strong>Luan C.</strong>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                        <li><a class="dropdown-item" href="#">Compras</a></li>
+                        <li><a class="dropdown-item" href="#">Configurações</a></li>
+                        <li><a class="dropdown-item" href="#">Carrinho</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Sair</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- /side bar menu -->
+
+        <!-- Slide carousel -->
+        <section class="carousel-container container-fluid" style="z-index: 300;">
+            <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="0"
+                        class="active ol-effects" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="1" class="ol-effects"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="2" class="ol-effects"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner col-md-12">
+                    <div class="carousel-item active">
+                        <img src="https://sacolas.com.br/wp-content/uploads/2016/05/sacolas-ideais-para-cada-cliente.jpg" class="d-block w-100" alt="..." height="550">
+                        <div class="carousel-caption d-none d-md-block container-effects">
+                            <h5>É só começar a comprar!</h5>
+                            <a href="#" class="btn-effects btn-white btn-animation-1">Ver ofertas</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://www.cope-salesandmarketing.com/wp-content/uploads/2015/12/boy-with-megaphone-banner.jpg" class="d-block w-100" alt="..." height="550">
+                        <div class="carousel-caption d-none d-md-block container-effects">
+                            <h5>Presente da mamãe</h5>
+                            <a href="#" class="btn-effects btn-white btn-animation-1">Ver ofertas</a>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://avio.com.br/wp-content/uploads/2021/04/Tamanho-de-imagem-para-post-no-Instagram-confira-o-guia-completo.png" class="d-block w-100" alt="..." height="550">
+                        <div class="carousel-caption d-none d-md-block align-items-center container-effects">
+                            <h5>Venha nos seguir no instagram</h5>
+                            <a href="#" class="btn-effects btn-insta btn-animation-1">Seguir no insta <i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <!-- /Slide carousel-->
+
+        <!-- Showcase categories -->
+
+        <section class="container-fluid">
+            <div class="col-md-3 text-center pt-4">
+                <span class="col-md-12">
+                    <h4 class="text-header" data-anime="top"> Produtos em destaque </h4>
+                    <hr data-anime="down">
+                </span>
+            </div>
+            <div class="row d-flex justify-content-center " data-anime="down"
+                style="background-image: url(./public/assets/images/4931029.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;">
+                <!-- Card 01# -->
+
+                <div class="card card-effects" data-anime="top" style="width:12rem; margin: 10px;">
+                    <img src="./public/assets/images/productkids/2.png"
+                        alt="Brinquedo" height="170">
+                    <div class="card-body">
+                        <h5 class="card-title">Brinquedo de montagem</h5>
+                        <small class="card-text">de 105,99 </small>por <strong class="card-text">85,99</strong>
+                        <a href="#" class="btn btn-warning text-white" style="width: 100%;margin-top: 15px;">Compar
+                            agora!</a>
+                    </div>
+                </div>
+
+                <!-- /Card 01# -->
+                <!-- Card 02# -->
+
+                <div class="card card-effects" data-anime="down" style="width:12rem; margin: 10px;">
+                    <img src="./public/assets/images/productkids/1.png"
+                        alt="Brinquedo em destaque" height="170">
+                    <div class="card-body">
+                        <h5 class="card-title">Urso de pelúcia</h5>
+                        <small class="card-text">de 105,99 </small>por <strong class="card-text">99,99</strong>
+                        <a href="#" class="btn btn-warning text-white" style="width: 100%;margin-top: 15px;">Compar
+                            agora!</a>
+                    </div>
+                </div>
+
+                <!-- /Card 02# -->
+                <!-- Card 03# -->
+
+                <div class="card card-effects" data-anime="top" style="width:12rem; margin: 10px;">
+                    <img src="./public/assets/images/productkids/3.png"
+                        alt="Conjunto infantil" height="170">
+                    <div class="card-body">
+                        <h5 class="card-title">Conjunto infantil</h5>
+                        <small class="card-text">de 105,99 </small>por <strong class="card-text">85,99</strong>
+                        <a href="#" class="btn btn-warning text-white" style="width: 100%;margin-top: 15px;">Compar
+                            agora!</a>
+                    </div>
+                </div>
+
+                <!-- /Card 03# -->
+                <!-- Card 04# -->
+
+                <div class="card card-effects" data-anime="down" style="width:12rem; margin: 10px;">
+                    <img src="./public/assets/images/productkids/4.png"
+                        alt="Moda inverno" height="170">
+                    <div class="card-body">
+                        <h5 class="card-title">Moda inverno completa</h5>
+                        <small class="card-text">de 105,99 </small>por <strong class="card-text">74,99</strong>
+                        <a href="#" class="btn btn-warning text-white" style="width: 100%;margin-top: 15px;">Compar
+                            agora!</a>
+                    </div>
+                </div>
+
+                <!-- /Card 04# -->
+                <!-- Card 05# -->
+
+                <div class="card card-effects" data-anime="top" style="width:12rem; margin: 10px;">
+                    <img src="./public/assets/images/productkids/5.png"
+                        alt="Conjunto mini agiota" height="170">
+                    <div class="card-body">
+                        <h5 class="card-title">Roupas sociais infantil</h5>
+                        <small class="card-text">de 105,99 </small>por <strong class="card-text">85,99</strong>
+                        <a href="#" class="btn btn-warning text-white" style="width: 100%;margin-top: 15px;">Compar
+                            agora!</a>
+                    </div>
+                </div>
+
+                <!-- /Card 05# -->
+            </div>
+            <hr>
+        </section>
+
+        <!-- /Showcase categories -->
+
+        <!-- BEST SELLERS -->
+
+        <section class="container-fluid">
+            <div class="col-md-12 text-center d-flex justify-content-center pt-4">
+                <span class="col-md-3">
+                    <h4 class="text-header" data-anime="top">Os mais vendidos</h4>
+                    <hr class="col-12" data-anime="down">
+                </span>
+            </div>
+            <div class="row bg-primary" data-anime="top">
+                <div id="carouselBest" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators" style="top: 96%;">
+                        <button type="button" data-bs-target="#carouselBest" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselBest" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <div class="d-flex justify-content-center flex-wrap col-md-12">
+                                <!-- Card 06# -->
+
+                                <div class="card card-effects" data-anime="down" style="width:12rem; margin: 10px;">
+                                    <img src="./public/assets/images/productkids/6.png"
+                                        alt="Camisas em destaque" height="200">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Conjunto inverno masculina</h5>
+                                        <small class="card-text">de 105,99 </small>por <strong
+                                            class="card-text">85,99</strong>
+                                        <a href="#" class="btn btn-warning text-white"
+                                            style="width: 100%;margin-top: 15px;">Compar agora!</a>
+                                    </div>
+                                </div>
+
+                                <!-- /Card 06# -->
+                                <!-- Card 05# -->
+
+                                <div class="card card-effects" data-anime="top" style="width:12rem; margin: 10px;">
+                                    <img src="./public/assets/images/productkids/7.png"
+                                        alt="..." height="200">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Conjunto completo infantil</h5>
+                                        <small class="card-text">de 105,99 </small>por <strong
+                                            class="card-text">85,99</strong>
+                                        <a href="#" class="btn btn-warning text-white"
+                                            style="width: 100%;margin-top: 15px;">Compar agora!</a>
+                                    </div>
+                                </div>
+
+                                <!-- /Card 05# -->
+                                <!-- Card 02# -->
+
+                                <div class="card card-effects" data-anime="down" style="width:12rem; margin: 10px;">
+                                    <img src="./public/assets/images/productkids/8.png"
+                                        alt="Conjunto" height="200">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Camisas infantis femininas</h5>
+                                        <small class="card-text">de 105,99 </small>por <strong
+                                            class="card-text">99,99</strong>
+                                        <a href="#" class="btn btn-warning text-white"
+                                            style="width: 100%;margin-top: 15px;">Compar agora!</a>
+                                    </div>
+                                </div>
+
+                                <!-- /Card 02# -->
+                                <!-- Card 01# -->
+
+                                <div class="card card-effects" data-anime="top" style="width:12rem; margin: 10px;">
+                                    <img src="./public/assets/images/productkids/9.png"
+                                        alt="Mais vendidos" height="200">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Lego de 03 a 07 anos</h5>
+                                        <small class="card-text">de 35,99 </small>por <strong
+                                            class="card-text">25,99</strong>
+                                        <a href="#" class="btn btn-warning text-white"
+                                            style="width: 100%;margin-top: 15px;">Compar agora!</a>
+                                    </div>
+                                </div>
+
+                                <!-- /Card 01# -->
+                                <!-- Card 04# -->
+
+                                <div class="card card-effects" style="width:12rem; margin: 10px;">
+                                    <img src="./public/assets/images/productkids/10.png"
+                                        alt="Mais vendidos" height="200">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Carrinhos de brinquedo</h5>
+                                        <small class="card-text">de 105,99 </small>por <strong
+                                            class="card-text">74,99</strong>
+                                        <a href="#" class="btn btn-warning text-white"
+                                            style="width: 100%;margin-top: 15px;">Compar agora!</a>
+                                    </div>
+                                </div>
+
+                                <!-- /Card 04# -->
+                                <!-- Card 03# -->
+
+                                <div class="card card-effects" style="width:12rem; margin: 10px;">
+                                    <img src="./public/assets/images/productkids/11.png"
+                                        alt="Mais vendidos " height="200">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Mario brinque infantil</h5>
+                                        <small class="card-text">de 105,99 </small>por <strong
+                                            class="card-text">85,99</strong>
+                                        <a href="#" class="btn btn-warning text-white"
+                                            style="width: 100%;margin-top: 15px;">Compar
+                                            agora!</a>
+                                    </div>
+                                </div>
+
+                                <!-- /Card 03# -->
+                            </div>
+                        </div>
+
+
+                        <div class="carousel-item" data-anime="top">
+                            <div class="d-flex justify-content-center col-md-12 flex-wrap">
+                                <!-- Card 05# -->
+
+                                <div class="card card-effects" style="width:12rem; margin: 10px;">
+                                    <img src="./public/assets/images/productkids/12.png"
+                                        alt="Camisas em destaque" height="200">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Camisas todas idades</h5>
+                                        <small class="card-text">de 105,99 </small>por <strong
+                                            class="card-text">85,99</strong>
+                                        <a href="#" class="btn btn-warning text-white"
+                                            style="width: 100%;margin-top: 15px;">Compar agora!</a>
+                                    </div>
+                                </div>
+
+                                <!-- /Card 05# -->
+                                <!-- Card 03# -->
+
+                                <div class="card card-effects" style="width:12rem; margin: 10px;">
+                                    <img src="./public/assets/images/productkids/13.png"
+                                        alt="Camisas em destaque" height="200">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Calças jeans infantis</h5>
+                                        <small class="card-text">de 105,99 </small>por <strong
+                                            class="card-text">85,99</strong>
+                                        <a href="#" class="btn btn-warning text-white"
+                                            style="width: 100%;margin-top: 15px;">Compar
+                                            agora!</a>
+                                    </div>
+                                </div>
+
+                                <!-- /Card 03# -->
+                                <!-- Card 04# -->
+
+                                <div class="card card-effects" style="width:12rem; margin: 10px;">
+                                    <img src="./public/assets/images/productkids/2.png"
+                                        alt="Camisas em destaque" height="200">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Monte a montanha</h5>
+                                        <small class="card-text">de 105,99 </small>por <strong
+                                            class="card-text">74,99</strong>
+                                        <a href="#" class="btn btn-warning text-white"
+                                            style="width: 100%;margin-top: 15px;">Compar agora!</a>
+                                    </div>
+                                </div>
+
+                                <!-- /Card 04# -->
+                                <!-- Card 06# -->
+
+                                <div class="card card-effects" style="width:12rem; margin: 10px;">
+                                    <img src="./public/assets/images/productkids/5.png"
+                                        alt="Camisas em destaqu"e height="200">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Conjunto social juvenil</h5>
+                                        <small class="card-text">de 105,99 </small>por <strong
+                                            class="card-text">85,99</strong>
+                                        <a href="#" class="btn btn-warning text-white"
+                                            style="width: 100%;margin-top: 15px;">Compar agora!</a>
+                                    </div>
+                                </div>
+
+                                <!-- /Card 06# -->
+
+                                <!-- Card 01# -->
+
+                                <div class="card card-effects" style="width:12rem; margin: 10px;">
+                                    <img src="./public/assets/images/productkids/4.png"
+                                        alt="Camisas em destaque" height="200">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Conjunto para crianças</h5>
+                                        <small class="card-text">de 105,99 </small>por <strong
+                                            class="card-text">85,99</strong>
+                                        <a href="#" class="btn btn-warning text-white"
+                                            style="width: 100%;margin-top: 15px;">Compar agora!</a>
+                                    </div>
+                                </div>
+
+                                <!-- /Card 01# -->
+                                <!-- Card 02# -->
+
+                                <div class="card card-effects" style="width:12rem; margin: 10px;">
+                                    <img src="./public/assets/images/productkids/7.png"
+                                        alt="Camisas em destaque" height="200">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Calças de moletom</h5>
+                                        <small class="card-text">de 105,99 </small>por <strong
+                                            class="card-text">99,99</strong>
+                                        <a href="#" class="btn btn-warning text-white"
+                                            style="width: 100%;margin-top: 15px;">Compar agora!</a>
+                                    </div>
+                                </div>
+
+                                <!-- /Card 02# -->
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselBest"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselBest"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <hr>
+        </section>
+
+        <!-- /BEST SELLERS -->
+        <!-- Section WHO WE ARE -->
+
+        <section class="container">
+            <div class="row g-0">
+                <div class="col-sm-6 col-md-6" data-anime="top">
+                    <h4 class="text-center text-header">
+                        Quem somos?
+                    </h4>
+                    <hr>
+                    <span class="col-md-4 pt-4 text-center" style="margin: 45px">
+                        <p class="text-center col-md-12">
+                            Sed accumsan, metus hendrerit dignissim gravida,
+                            nulla lorem fringilla felis, ut sollicitudin neq
+                            ue tellus a lectus. Ut imperdiet placerat condimentum.
+                        </p>
+
+                        <p class="text-center col-md-12 pt-3">
+                            <strong>nec hendrerit nulla</strong>. Vivamus non purus
+                            quis nulla iaculis pulvinar. Morbi auctor eu m
+                            agna non sollicitudin. Etiam euismod consequat
+                            felis, non rhoncus risus sollicitudin in. Cra
+                            s a consectetur ex. Cras vulputate nibh odio, v
+                            itae molestie felis cursus id. Curabitur tinci
+                            dunt leo magna, a fermentum ipsum dictum vitae.
+                        </p>
+                        <p class="text-lg-start col-md-12 pt-3">
+                            <i class="fas fa-home" style="color: #439214;"></i> <strong>Endereços:</strong> Vivamus non
+                            purus, nº 2312, BR<br>
+                            <i class="fas fa-map-marker-alt" style="color: red;"></i> <strong>CEP:</strong> 12345-678
+                            <br>
+                            <i class="fas fa-phone-square-alt" style="color: royalblue;"></i><strong>Telefone:</strong>
+                            (88)1234-1235
+                        </p>
+                    </span>
+                </div>
+                <div class="col-12 col-md-6" style="padding:10px;" data-anime="down">
+                    <div id="carouselPropag" class="carousel carousel-light slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselPropag" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselPropag" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselPropag" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner" style="border-radius: 5px;margin-top: 40px;">
+                            <div class="carousel-item active" data-bs-interval="10000">
+                                <img src="https://www.jornalcontabil.com.br/wp-content/uploads/2019/10/menino-mentindo-ligado-tapete-verde_23-2147798006.jpg"
+                                    class="d-block w-100" height="400" width="100%" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Encontre o melhor para seu filho</h5>
+                                    <p>Temos uma ampla linha de brinquedos disponível.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <img src="https://alphabeto.vteximg.com.br/arquivos/ids/342299/mosaico%20vest.jpg?v=637623030170870000"
+                                    class="d-block w-100" height="400" width="100%" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Roupas para todas as idades com desconto</h5>
+                                    <p>Venha ver todos nossos produtos da linha feminina.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://img.elo7.com.br/product/zoom/2DB07E3/mochila-infantil-bichinhos-bebe-animais-escolar-cachorrinho-mochila-para-passeio.jpg"
+                                    class="d-block w-100" height="400" width="100%" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5 class="text-dark">Seja para passear ou estudar nós temos</h5>
+                                    <p class="text-dark">Mochilas mega personalizadas para o seu filho arrasar!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPropag"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselPropag"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- /Section WHO WE ARE -->
+        <hr>
+    </main>
+    <!-- /Header pag -->
+
+    <!-- Footer pag -->
+
+        <!-- Footer -->
+        <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
+            <!-- Section: Social media -->
+            <section class="d-flex justify-content-between p-4" style="background-color: #0d6efd;
+                   ">
+                <!-- Left -->
+                <div class="me-5">
+                    <span>Mídias sociais:</span>
+                </div>
+                <!-- Left -->
+
+                <!-- Right -->
+                <div>
+                    <a href="" class="text-white me-4">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="" class="text-white me-4">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="text-white me-4">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="" class="text-white me-4">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="" class="text-white me-4">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/DevMboo" class="text-white me-4">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <!-- Right -->
+            </section>
+            <!-- Section: Social media -->
+
+            <!-- Section: Links  -->
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <!-- Content -->
+                            <h6 class="text-uppercase fw-bold">Loja virtual</h6>
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                style="width: 60px; background-color: #7c4dff; height: 2px" />
+                            <p>
+                                Here you can use rows and columns to organize your footer
+                                content. Lorem ipsum dolor sit amet, consectetur adipisicing
+                                elit.
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold">Produtos</h6>
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                style="width: 60px; background-color: #7c4dff; height: 2px" />
+                            <p>
+                                <a href="#!" class="text-white">Baby toys</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-white">Look for baby</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-white">Acessorios</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-white">Kids for kids</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold">Links rápidos</h6>
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                style="width: 60px; background-color: #7c4dff; height: 2px" />
+                            <p>
+                                <a href="#!" class="text-white">Minha conta</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-white">Quero ser parceiro</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-white">Problemas com o produto</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-white">Ajuda</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold">Contatos</h6>
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                style="width: 60px; background-color: #7c4dff; height: 2px" />
+                            <p><i class="fas fa-home mr-3"></i> Vivamus non purus, nº 2312</p>
+                            <p><i class="fas fa-envelope mr-3"></i> lojavirtual@helpvirtual.com</p>
+                            <p><i class="fas fa-phone mr-3"></i> (88)1234-1235</p>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!-- Grid row -->
+                </div>
+            </section>
+            <!-- Section: Links  -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                © 2021 Copyright:
+                <a class="text-white text-header" href="#">lojavirtual.com</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+
+    <!-- /Footer pag -->
+
+
+    <!-- My functions -->
+    <script src="./public/js/functions.js"></script>
+    <!-- Bootstrap js cdn min,bundle,popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    </script>
+    <!-- /Bootstrap js cdn min,bundle,popper -->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
+    <!-- Jquery cdn -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <!-- Jquery cdn -->
+    <!-- Preloader js -->
+    <script src="./public/js/preloader.js"></script>
+    <!-- /Preloader js-->
+    <!-- Scrolling js -->
+    <script src="./public/js/scroll.effects.js"></script>
+    <!-- /Scrolling js -->
+
+</body>
+
+</html>
