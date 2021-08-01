@@ -30,7 +30,72 @@ function toyView4(){
     document.getElementById('price').innerHTML = "R$ 45,60"
     document.getElementById("toyPreview").src = "public/assets/images/productkids/11.png";
 }
-//script count frete product
+
+//script select initial image
+function toyView5(){
+    document.getElementById('name').innerHTML = "<strong>Nome:</strong> Macacão infantil até 7 anos"
+    document.getElementById('qnt').innerHTML = "<strong>Quantidade disponível:</strong> 60 unidades"
+    document.getElementById('marca').innerHTML = "<strong>Marca do produto:</strong> Cool"
+    document.getElementById('price').innerHTML = "R$ 94,90"
+    document.getElementById("toyPreview").src = "public/assets/images/productkids/4.png";
+}
+//script select secondary image
+function toyView6(){
+    document.getElementById('name').innerHTML = "<strong>Nome:</strong> Roupas socias infantis"
+    document.getElementById('qnt').innerHTML = "<strong>Quantidade disponível:</strong> 64 unidades"
+    document.getElementById('marca').innerHTML = "<strong>Marca do produto:</strong> Baby care"
+    document.getElementById('price').innerHTML = "R$ 59,99"
+    document.getElementById("toyPreview").src = "public/assets/images/productkids/5.png";
+}
+//script select third image
+function toyView7(){
+    document.getElementById('name').innerHTML = "<strong>Nome:</strong> Cachecol de inverno infantil"
+    document.getElementById('qnt').innerHTML = "<strong>Quantidade disponível:</strong> 10 unidades"
+    document.getElementById('marca').innerHTML = "<strong>Marca do produto:</strong> Collins"
+    document.getElementById('price').innerHTML = "R$ 159,99"
+    document.getElementById("toyPreview").src = "public/assets/images/productkids/6.png";
+}
+//script select return image
+function toyView8(){
+    document.getElementById('name').innerHTML = "<strong>Nome: </strong>Roupas de moletom infantil"
+    document.getElementById('qnt').innerHTML = "<strong>Quantidade disponível: </strong>25 unidades"
+    document.getElementById('marca').innerHTML = "<strong>Marca do produto:</strong> Goosebumps"
+    document.getElementById('price').innerHTML = "R$ 65,60"
+    document.getElementById("toyPreview").src = "public/assets/images/productkids/7.png";
+}
+//script select initial image
+function toyView9(){
+    document.getElementById('name').innerHTML = "<strong>Nome:</strong> Roupas infantis de 0 a 3 anos"
+    document.getElementById('qnt').innerHTML = "<strong>Quantidade disponível:</strong> 60 unidades"
+    document.getElementById('marca').innerHTML = "<strong>Marca do produto:</strong> Baby shoes"
+    document.getElementById('price').innerHTML = "R$ 94,90"
+    document.getElementById("toyPreview").src = "public/assets/images/productkids/3.png";
+}
+//script select secondary image
+function toyView10(){
+    document.getElementById('name').innerHTML = "<strong>Nome:</strong> Camisas de 1 a 7 anos"
+    document.getElementById('qnt').innerHTML = "<strong>Quantidade disponível:</strong> 564 unidades"
+    document.getElementById('marca').innerHTML = "<strong>Marca do produto:</strong> Nani buggs"
+    document.getElementById('price').innerHTML = "R$ 39,99"
+    document.getElementById("toyPreview").src = "public/assets/images/productkids/12.png";
+}
+//script select third image
+function toyView11(){
+    document.getElementById('name').innerHTML = "<strong>Nome:</strong> Calças jeans infantis de 03 a 07 anps"
+    document.getElementById('qnt').innerHTML = "<strong>Quantidade disponível:</strong> 99 unidades"
+    document.getElementById('marca').innerHTML = "<strong>Marca do produto:</strong> Collins"
+    document.getElementById('price').innerHTML = "R$ 109,99"
+    document.getElementById("toyPreview").src = "public/assets/images/productkids/13.png";
+}
+//script select return image
+function toyView12(){
+    document.getElementById('name').innerHTML = "<strong>Nome: </strong>Roupinha infantil todas idades"
+    document.getElementById('qnt').innerHTML = "<strong>Quantidade disponível: </strong>8 unidades"
+    document.getElementById('marca').innerHTML = "<strong>Marca do produto:</strong> Goosebumps"
+    document.getElementById('price').innerHTML = "R$ 45,60"
+    document.getElementById("toyPreview").src = "public/assets/images/productkids/8.png";
+}
+//script valid frete product
 function validZip(){
 
     let cep = document.getElementById('cep')

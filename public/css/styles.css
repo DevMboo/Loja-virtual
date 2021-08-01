@@ -76,12 +76,12 @@
 /* Carousel */
 
 .carousel-container {
-    height: 550px;
+    height: 400px;
     width: 100%;
 }
 
 .carousel-container img {
-    height: 550px;
+    height: 400px;
 }
 
 /* Content pagination table css*/
