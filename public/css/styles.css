@@ -163,3 +163,106 @@ input[type="button"]:hover:not(.active) {
     font-size: 17px;
     font-weight: bold;
 }
+
+/* Modal style */
+.modal-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .16);
+    display: none;
+    animation: modalOpen 2s;
+    z-index: 1200;
+}
+
+@keyframes modalOpen{
+    from{
+        opacity: 0;
+        transform: translate3d(20px,0,0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+.modal-item{
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.modal-item > div > .btn-closed{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    height: 30px;
+    width: 30px;
+    border: none;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+    transition: 0.5s all;
+}
+
+.modal-item > div > .btn-closed:hover{
+    background-color: #dc143c;
+    color: #000;
+}
+
+.modal-header{
+    margin-top: -10px;
+}
+
+.modal-body{
+    height: 450px;
+    overflow: auto;
+    overflow-y: scroll;
+
+}
+
+.image-content{
+    position: relative;
+}
+
+.image-content .container-text{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 35px;
+    color: #fff;
+    background-color: #218EEE;
+    text-align: center;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.modal-footer > button{
+    margin-top: 25px;
+    height: 65px;
+}
+
+/* Cart button css */
+
+.cart-content{
+    position: fixed;
+    top: 85%;
+    left: 13px;
+}
+
+.cart-content > .btn-cart{
+    border: none;
+    height: 65px;
+    width: 65px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 50%;
+    background-color: #218EEE;
+    color: #fff;
+    box-shadow: 4px 2px 4px rgba(0, 0, 0, .5);
+}

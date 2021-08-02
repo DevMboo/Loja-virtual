@@ -202,6 +202,19 @@
                             <div class="col-md-6 card" style="width: 100%;">
                                 <p class="pt-1 my-1" style="margin-left: 10px;" id="marca"><strong>Marca do produto: </strong>Nintendo</p>
                             </div>
+                            <div class="col-md-6 card" style="width: 100%;">
+                                <label class="my-1 pt-1" style="margin-left: 10px;"><strong>Selecione um tamanho: </strong></label>
+                                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                                    <label class="btn btn-outline-primary" for="btnradio1">22 cm</label>
+                                  
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="btnradio2">29 cm</label>
+                                  
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="btnradio3">39 cm</label>
+                                </div>
+                            </div>
                             <button class="accordion my-1 text-white">Descrição <i class="fas fa-plus-circle"></i></button>
                             <div class="panel">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -233,7 +246,8 @@
                                 <hr>
                             </div>
                             <div class="col-md-6 d-flex justify-content-center" style="width: 100%;">
-                                <button class="btn btn-primary btn-lg" style="width: 100%;">Comprar!</button>
+                                <button class="btn btn-primary btn-lg" style="width: 100%;"
+                                onclick="openModal()">Comprar!</button>
                             </div>
                             <!-- /Card"s descript product -->
                         </div>
@@ -444,6 +458,49 @@
             <!-- Copyright -->
         </footer>
         <!-- Footer -->
+        <!-- Modal js -->
+        <div class="modal-container" id="modalBuy">
+            <div class="col-md-12 pt-2 modal-item" style="overflow-y:scroll;">
+                <div class="col-md-12 modal-header bg-primary">
+                    <h3 class="text-white" style="margin-left: 10px;">Finalizar compra</h3>
+                    <button class="btn-closed" onclick="closedModal()">X</button>
+                    <hr>
+                </div>
+                <div class="col-md-12 d-flex justify-content-center flex-wrap modal-body">
+                    <div class="col-md-5 d-flex image-content" style="margin: 5px;">
+                        <img src="./public/assets/images/productkids/11.png" alt="..." id="productBuy" style="width: 100%;height: 25rem;border-radius: 10px;">
+                        <div class="container-text">
+                            <p>Produto selecionado</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 card d-flex" style="margin: 5px;width: 36rem;">
+                        
+                            <div class="col-md-12">
+                                <div class="card col-md-12">
+                                    <strong>Nome:</strong><p style="margin-left: 5px;" class="name">Brinquedo Mario de montagem</p>
+                                </div>
+                                <div class="card col-md-12">
+                                    <strong>Preço:</strong><p style="margin-left: 5px;" class="prices">R$ 45,60</p>
+                                </div>
+                                <div class="card col-md-12">
+                                    <strong>Marca:</strong><p style="margin-left: 5px;" class="marca">Nintendo</p>
+                                </div>
+                                <div class="card col-md-12">
+                                    <strong>Tamanho:</strong><p style="margin-left: 5px;" id="tmh">22 cm</p>
+                                </div>
+                                <div class="card col-md-12">
+                                   <img src="./public/assets/images/formas_de_pagamento.jpg" alt="..." width="100%"> 
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 d-flex justify-content-center modal-footer">
+                    <button class="btn btn-secondary" onclick="closedModal()">Continuar comprando?</button>
+                    <button class="btn btn-primary">Concluir está compra!</button>
+                </div>
+            </div>
+        </div>
+    <!-- /Modal js -->
 
     <!-- /Footer pag -->
 
@@ -481,5 +538,11 @@
     <!-- Mask cep input -->
     <script src="./public/js/mask.js"></script>
     <!-- /Mask cep input -->
+    <!-- Modal open -->
+    <script src="./public/js/modal.open.js"></script>
+    <!-- /Modal open -->
+    <!-- Check js -->
+    <script src="./public/js/checkcm.js"></script>
+    <!-- /Check js-->
 </body>
 </html>
